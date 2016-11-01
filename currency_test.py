@@ -26,8 +26,12 @@ def test_two_currencies_subtract():
 def test_two_currencies_multiply():
     a = Currency('USD', 6)
     b = Currency('USD', 6)
-    assert int(a) * int(b) == Currency('USD', 36)
+    assert a * b == ('USD', 36)
 
+        # curr1 = Currency(100, 'USD')
+        # enter_number = 9
+        #
+        # assert  curr1 * enter_number == (900, 'USD')
 # def test_two_currencies_subtract():
 #     a = Currency('USD', 5)
 #     b = Currency('USD', 3)

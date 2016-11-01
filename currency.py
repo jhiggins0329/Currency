@@ -10,21 +10,25 @@ class Currency:
             return True
         return False
 
-    def __add__(self, value):
-        return '{} plus {}'.format(self.value, value)
-        if self.currency_code == other.currency_code
-        pass
+    def __add__(self, other):
+        if self.currency_code != other.currency_code:
+            return self.value + other.value, self.currency_code
 
     def __sub__(self, other):
-        if self.currency_code == other.currency_code and self.value == other.value:
-            return Currency()
-        pass
+        if self.currency_code != other.currency_code: #and self.value == other.value:
+            return True
+        return False
+
     def __ne__(self, other):
         return not self.__eq__(other)
 
-    def __mul__(self, other):
-        return Currency * Currency
+    # def __mul__(self, number):
+        # return (self.currency_code * int(number), self.currency_code)
+    def __mul__(self, enter_num):
+        return (self.value * float(enter_num), self.currency_code)
 
+class DifferentCurrencyCodeError(Exception):
+    pass
 # def __add__(self, other):
 #     if self.value + other.value == Currency
 #         return Currency(self.currency_code, self.value + other.value)
