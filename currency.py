@@ -10,9 +10,12 @@ class Currency:
         return False
 
     def __add__(self, other):
-        if self.value == other.value:
-            return Currency
+        if self.currency_code == other.currency_code and self.value == other.value:
+            return self + other 
 
+    def __sub__(self, other):
+        if self.currency_code == other.currency_code and self.value == other.value:
+            return Currency()
 #     def (arg):
 #         pass __add__(self, other):
 #         if self.value == other.value

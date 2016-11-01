@@ -15,6 +15,10 @@ def test_two_currencies_add():
     b = Currency('USD', 5)
     assert a + b == Currency('USD', 9)
 
+def test_two_currencies_sub():
+    a = Currency('USD', 6)
+    b = Currency('USD', 6)
+    assert a - b == Currency('USD', 0)
 # def test_two_currencies_subtract():
 #     a = Currency('USD', 5)
 #     b = Currency('USD', 3)
