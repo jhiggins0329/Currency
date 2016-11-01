@@ -2,7 +2,7 @@ from currency import Currency
 
 class CurrencyConverter:
 
-    conversion_rates = {'USD': 1.0, 'EUR': 0.9, 'JPY': 106}
+    conversion_rates = {'USD': 1.0, 'EUR': 0.74, 'JPY': 120.0}
 
     def __init__(self, rates):
         self.rates = rates
