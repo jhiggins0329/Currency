@@ -25,7 +25,8 @@ class Currency:
     # def __mul__(self, number):
         # return (self.currency_code * int(number), self.currency_code)
     def __mul__(self, enter_num):
-        return (self.value * float(enter_num), self.currency_code)
+        self.enter_num = enter_num
+        return (self.value * self.enter_num, self.currency_code)
 
 class DifferentCurrencyCodeError(Exception):
     pass
